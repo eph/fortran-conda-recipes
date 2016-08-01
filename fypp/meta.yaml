@@ -1,0 +1,62 @@
+package:
+  name: fypp
+  version: "0.11"
+
+source:
+  fn: fypp-0.11.tar.gz
+  url: https://files.pythonhosted.org/packages/1f/f6/ca80dd97f48ac8416280f7ff7abc8831477510fa460338c50d0bedefac39/fypp-0.11.tar.gz
+  md5: 9e1e953f5a1d15d586beb8e46842b014
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - fypp = fypp:main
+    #
+    # Would create an entry point called fypp that calls fypp.main()
+
+    - fypp=fypp:run_fypp
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  # imports:
+
+  commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+    - fypp --help
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://bitbucket.org/aradi/fypp
+  license: BSD License
+  summary: 'Python powered Fortran preprocessor'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml

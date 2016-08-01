@@ -1,0 +1,12 @@
+package:
+  name: fruit
+  version: 3.4.1
+
+source:
+  fn: fruit_3.4.1.zip
+  url: http://downloads.sourceforge.net/project/fortranxunit/fruit_3.4.1/fruit_3.4.1.zip
+
+requirements:
+  build:
+    - libgcc
+    - mpi4py

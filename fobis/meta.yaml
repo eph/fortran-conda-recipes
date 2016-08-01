@@ -1,0 +1,61 @@
+package:
+  name: fobis.py
+  version: "1.9.6"
+
+source:
+  fn: FoBiS.py-1.9.6.tar.gz
+  url: https://pypi.python.org/packages/3a/0e/689a2e89abad461c8e5e9b611a97aa819f84518ec4996773d542ae83ec6f/FoBiS.py-1.9.6.tar.gz
+  md5: 0fde2e0018e7bfb32895133ea7e156e7
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - fobis.py = fobis.py:main
+    #
+    # Would create an entry point called fobis.py that calls fobis.py.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - fobis
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  # requires:
+    # Put any additional test requirements here.  For example
+    # - nose
+
+about:
+  home: https://github.com/szaghi/FoBiS
+  license: GNU General Public License v3 (GPLv3)
+  summary: 'a Fortran Building System for poor men'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
