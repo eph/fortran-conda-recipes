@@ -5,8 +5,17 @@ package:
 source:
   git_url: https://github.com/acroucher/FRUITPy.git
 
+  
 requirements:
   build:
+    - python
     - fruit
+
   run:
+    - python 
     - fruit
+
+
+test:
+  imports:
+    - FRUIT

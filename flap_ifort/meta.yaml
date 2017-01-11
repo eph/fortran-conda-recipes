@@ -1,0 +1,17 @@
+package:
+  name: flap
+  version: 1
+
+source:
+  git_url: https://github.com/szaghi/FLAP.git
+
+build:
+  number: 1
+
+  features:
+    - ifort
+    
+requirements:
+  build:
+    - fobis.py
+
